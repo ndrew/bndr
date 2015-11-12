@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<link rel="stylesheet" href="styles.css" />
+
+		<style>
+			html, body    {
+  				height: 100%;
+			}
+		</style>
+ 
+ 		<script type="text/javascript">
+		(function () {
+			var checkStatus = function() {
+				document.getElementById("status").innerHTML = 'Loading ...';
+			
+				var r = new XMLHttpRequest(); 
+				r.open("POST", "status.jsf", true);
+				r.onreadystatechange = function () {
+					if (r.readyState != 4 || r.status != 200) {
+						return; 
+					}
+					var response = JSON.parse(r.responseText);
+
+					////////////////////
+					// js url routing
+					//
+					
+					document.getElementById("status").innerHTML = response.status;
+					if (response.status == "not-logged-in") {
+						setTimeout(function() {
+							window.location.href="login.jsf";
+						}, 3500);
+					}
+					//console.log(status);
+				};
+				r.send("");
+			};
+			
+			document.addEventListener("DOMContentLoaded", function() {
+				checkStatus();	
+			});	 
+		})();
+ 		</script>
+ 	</head>
+ <body>
+	<table class="wrapper" style="margin-top: auto; margin-bottom: auto;">
+      	<tr>
+        	<td>
+         		<h3 style="border-bottom-style: none;">bndr</h3>
+         		<img class="logo-big" src="img/logo1.png" />
+				<div id="status" class="box">...</div>
+         	</td>
+      	</tr>
+   	</table>	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+     >
+
+<h:head>
+	<h:outputScript name="jsf.js" library="javax.faces"/>
+</h:head>
+
+<h:form>
+	<h:inputText value="#{auth.username}">
+		<f:ajax event="keyup" render="id1"/>
+	</h:inputText>
+	
+	<h:outputText value="#{auth.username}" id="id1"/>
+</h:form>
+
+</html>

@@ -1,0 +1,13 @@
+.project
+.classpath
+.settings
+*.ipr
+.idea
+*.iws
+*.iml
+*~
+.DS_Store
+target
+.metadata
+WebContent/WEB-INF/classes
+WebContent/WEB-INF/lib
