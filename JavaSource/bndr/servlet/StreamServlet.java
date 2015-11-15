@@ -153,9 +153,6 @@ public class StreamServlet extends HttpServlet {
             throws IOException
     {
 
-
-        
-
         // Validate the requested file ------------------------------------------------------------
 
         // Get requested file by path info.
