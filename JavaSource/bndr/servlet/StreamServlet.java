@@ -50,8 +50,8 @@ public class StreamServlet extends HttpServlet {
 
 
 
-    public static final String AWS_ACCESS_KEY = "S3_KEY";
-    public static final String AWS_SECRET_KEY = "S3_SECRET";
+    public static final String AWS_ACCESS_KEY = "AWS_ACCESS_KEY_ID";
+    public static final String AWS_SECRET_KEY = "AWS_SECRET_ACCESS_KEY";
 
     // Actions ------------------------------------------------------------------------------------
 
