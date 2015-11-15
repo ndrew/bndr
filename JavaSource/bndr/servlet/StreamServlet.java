@@ -75,7 +75,7 @@ public class StreamServlet extends HttpServlet {
         amazonS3 = new AmazonS3Client(awsCredentials);
 
         // Get base path (path to get all resources from) as init parameter.
-        this.basePath = getInitParameter("basePath");//getServletContext().getRealPath(getInitParameter("basePath"));
+        /*this.basePath = getInitParameter("basePath");//getServletContext().getRealPath(getInitParameter("basePath"));
 
         // Validate base path.
         if (this.basePath == null) {
@@ -92,7 +92,7 @@ public class StreamServlet extends HttpServlet {
                 throw new ServletException("FileServlet init param 'basePath' value '"
                     + this.basePath + "' is actually not readable in file system.");
             }
-        }
+        } */
     }
 
     protected void logRequest(HttpServletRequest request) {

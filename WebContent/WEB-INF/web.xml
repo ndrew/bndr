@@ -26,11 +26,6 @@
         <servlet-name>StreamServlet</servlet-name>
         <servlet-class>bndr.servlet.StreamServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
-
-         <init-param>
-            <param-name>basePath</param-name>
-            <param-value>/Users/ndrw/d/bndr</param-value>
-        </init-param>
   </servlet>
 
   <servlet-mapping>
