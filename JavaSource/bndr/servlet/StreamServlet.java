@@ -152,7 +152,6 @@ public class StreamServlet extends HttpServlet {
     protected void processRequestForAWS(HttpServletRequest request, HttpServletResponse response, boolean content)
             throws IOException
     {
-
         // Validate the requested file ------------------------------------------------------------
 
         // Get requested file by path info.
@@ -186,7 +185,6 @@ public class StreamServlet extends HttpServlet {
         // Prepare some variables. The ETag is an unique identifier of the file.
         //String fileName = file.getName();
         //long length = file.length();
-
 
 
         GetObjectMetadataRequest objectMetadataRequestest = new GetObjectMetadataRequest(s3Bucket, key);
