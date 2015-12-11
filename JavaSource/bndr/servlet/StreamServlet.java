@@ -169,10 +169,8 @@ public class StreamServlet extends HttpServlet {
         }
 
         // String fileName = "dubbbb.mp3";
-        String key = fileName;//fileName.startsWith("/") ? fileName.substring(1) : fileName;
+        String key = fileName.startsWith("/") ? fileName.substring(1) : fileName;
 
-
-        response.sendError(500, key);
 
         // URL-decode the file name (might contain spaces and on) and prepare file object.
         //File file = new File(basePath, URLDecoder.decode(requestedFile, "UTF-8"));
