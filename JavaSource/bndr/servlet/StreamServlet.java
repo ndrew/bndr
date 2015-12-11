@@ -69,7 +69,7 @@ public class StreamServlet extends HttpServlet {
 
         String accessKey = System.getenv(AWS_ACCESS_KEY); 
         String secretKey = System.getenv(AWS_SECRET_KEY); 
-        s3Bucket = "2015_12_09"; // "bndr-test";
+        s3Bucket = "bndr-test";
 
         AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
         amazonS3 = new AmazonS3Client(awsCredentials);
@@ -159,9 +159,6 @@ public class StreamServlet extends HttpServlet {
 
         String fileName = requestedFile;
 
-        // String fileName = "dubbbb.mp3";
-        String key = "music" + fileName;
-
 
         // Check if file is actually supplied to the request URL.
         if (requestedFile == null) {
@@ -170,6 +167,10 @@ public class StreamServlet extends HttpServlet {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
+
+        // String fileName = "dubbbb.mp3";
+        String key = fileName.startsWith("/") ? fileName.substring(1) : fileName;
+
 
         // URL-decode the file name (might contain spaces and on) and prepare file object.
         //File file = new File(basePath, URLDecoder.decode(requestedFile, "UTF-8"));
