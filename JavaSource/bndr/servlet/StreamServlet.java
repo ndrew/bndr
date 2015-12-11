@@ -69,7 +69,7 @@ public class StreamServlet extends HttpServlet {
 
         String accessKey = System.getenv(AWS_ACCESS_KEY); 
         String secretKey = System.getenv(AWS_SECRET_KEY); 
-        s3Bucket = "bndr-test";
+        s3Bucket = "2015_12_09"; // "bndr-test";
 
         AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
         amazonS3 = new AmazonS3Client(awsCredentials);
@@ -767,7 +767,7 @@ public class StreamServlet extends HttpServlet {
 
     /**
      * Copy the given byte range of the given input to the given output. Based on AWS.
-     * @param input The input to copy the given range to the given output for.
+     * @param fileKey ..
      * @param output The output to copy the given range from the given input for.
      * @param start Start of the byte range.
      * @param length Length of the byte range.
