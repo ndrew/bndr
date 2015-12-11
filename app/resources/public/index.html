@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="js/wavesurfer.min.js" type="text/javascript"></script>
+    <script src="js/wavesurfer.timeline.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <h2>bndr</h2>
+
+      <form>
+        <input id="mp3" type="text" value="gggroovy_bass.mp3"/>
+        <button id="load">Load</button>
+        <button id="play">Play/Pause</button>
+        <button id="waveform">Get waveform</button>
+
+      </form>
+
+      <div id="wave"></div>
+      <div id="wave-timeline"></div>
+
+    </div>
+    <script src="js/compiled/app.js" type="text/javascript"></script>
+  </body>
+</html>
